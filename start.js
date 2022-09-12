@@ -104,3 +104,57 @@ console.log(Boolean(eger2));        //true gösterir
 // length ile karakter sayısı verisi öğrenilir.
 username = "Hey"
 console.log( Boolean(username.length > 0));     //true gösterir
+
+// VERİ TÜRÜ KONTROLÜ
+
+let price1 = 111;
+let price2 = "111";
+let price3 = true;
+
+console.log( typeof(price1) )
+console.log( typeof(price2) )
+console.log( typeof(price3) )
+
+// VERİ TÜRÜ DEĞİŞTİRME --> String to Int
+
+let number1 = "111";
+console.log("Number1 'nin cinsi: " + number1 + " " + typeof(number1));
+
+number1 = Number(number1);                               // NUMBER'a çevriliyor.
+console.log("Number1 'nin cinsi: " + number1 + " " + typeof(number1));
+
+let number2 = "111px";
+console.log("Number2 'nin cinsi: " + number2 + " " + typeof(number2));
+
+number2 = parseInt(number2);                            // NUMBER'a çevriliyor.
+console.log("Number2 'nin cinsi: " + number2 + " " + typeof(number2));
+
+let number3 = "111.3px";
+console.log("Number3 'nin cinsi: " + number3 + " " + typeof(number3));
+
+number3 = parseFloat(number3);                            // Float'a çevriliyor.
+console.log("Number3 'nin cinsi: " + number3 + " " + typeof(number3));
+
+// VERİ TÜRÜ DEĞİŞTİRME --> INT to String
+
+let number4 = 111;
+console.log("Number4' ün cinsi: " + number4 + " " + typeof(number4))
+
+number4 = number4.toString();                            // String'e çevriliyor.
+console.log("Number4' ün cinsi: " + number4 + " " + typeof(number4))
+
+// TEMPLATE LITERALS KULLANIMI
+
+let name = "serkan"
+let DOMAIN = "pusulafinans.com"
+
+let email = name + "@" + DOMAIN;
+
+let info = `Merhaba ${name} web sitemize hoş geldin.
+
+Mail adresin: ${email}
+
+İyi kullanımlar.
+`
+
+console.log(info);
