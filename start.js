@@ -143,7 +143,7 @@ console.log("Number4' ün cinsi: " + number4 + " " + typeof(number4))
 number4 = number4.toString();                            // String'e çevriliyor.
 console.log("Number4' ün cinsi: " + number4 + " " + typeof(number4))
 
-// TEMPLATE LITERALS KULLANIMI
+// TEMPLATE LITERALS KULLANIMI (alt + ,)
 
 let name = "serkan"
 let DOMAIN = "pusulafinans.com"
@@ -153,8 +153,33 @@ let email = name + "@" + DOMAIN;
 let info = `Merhaba ${name} web sitemize hoş geldin.
 
 Mail adresin: ${email}
+Mail adresinin uzunluğu: ${email.length}
 
-İyi kullanımlar.
-`
+Kısa isminiz: ${name[0]+name[1]}.
+
+İyi kullanımlar.`
 
 console.log(info);
+
+// JAVA DOM
+console.log(document.head)
+console.log(document.URL)
+
+// DOM İLE ÖĞE SEÇME VE DEĞİŞTİRME
+
+document.getElementById('title')        // getElementById ile documentte ID ile arayarak, buluyoruz.
+
+console.log(title.innerHTML)            // innerHTML ile yazılan bilgi gösterilir.
+
+title.innerHTML = "DENEME"              // innerHTML içerisindeki bilgiyi değiştirme
+
+console.log(title.innerHTML)
+
+let link = document.querySelector("#linkid")
+
+link.innerHTML = "yeni link bilgisi"   // innerHTML içerisindeki bilgiyi değiştirme
+link.innerHTML += " degisti"           // innerHTML içerisindeki bilgiye ekleyerek, değiştirme
+
+link.style.color = "red"               // id elementine style atayabiliyoruz.
+link.classList.add('btn')              // id elementine class atayabiliyoruz.
+
