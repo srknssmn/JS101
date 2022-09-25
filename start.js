@@ -105,7 +105,7 @@ console.log(Boolean(eger2));        //true gösterir
 username = "Hey"
 console.log( Boolean(username.length > 0));     //true gösterir
 
-// VERİ TÜRÜ KONTROLÜ
+//  !!!!!!!!!!!!    VERİ TÜRÜ KONTROLÜ  !!!!!!!!!!!! 
 
 let price1 = 111;
 let price2 = "111";
@@ -115,7 +115,7 @@ console.log( typeof(price1) )
 console.log( typeof(price2) )
 console.log( typeof(price3) )
 
-// VERİ TÜRÜ DEĞİŞTİRME --> String to Int
+//  !!!!!!!!!!!!    VERİ TÜRÜ DEĞİŞTİRME --> String to Int  !!!!!!!!!!!! 
 
 let number1 = "111";
 console.log("Number1 'nin cinsi: " + number1 + " " + typeof(number1));
@@ -135,7 +135,7 @@ console.log("Number3 'nin cinsi: " + number3 + " " + typeof(number3));
 number3 = parseFloat(number3);                            // Float'a çevriliyor.
 console.log("Number3 'nin cinsi: " + number3 + " " + typeof(number3));
 
-// VERİ TÜRÜ DEĞİŞTİRME --> INT to String
+//  !!!!!!!!!!!!    VERİ TÜRÜ DEĞİŞTİRME --> INT to String  !!!!!!!!!!!! 
 
 let number4 = 111;
 console.log("Number4' ün cinsi: " + number4 + " " + typeof(number4))
@@ -143,7 +143,7 @@ console.log("Number4' ün cinsi: " + number4 + " " + typeof(number4))
 number4 = number4.toString();                            // String'e çevriliyor.
 console.log("Number4' ün cinsi: " + number4 + " " + typeof(number4))
 
-// TEMPLATE LITERALS KULLANIMI (alt + ,)
+//  !!!!!!!!!!!!    TEMPLATE LITERALS KULLANIMI (alt + ,)   !!!!!!!!!!!! 
 
 let name = "serkan"
 let DOMAIN = "pusulafinans.com"
@@ -165,7 +165,7 @@ console.log(info);
 console.log(document.head)
 console.log(document.URL)
 
-// DOM İLE ÖĞE SEÇME VE DEĞİŞTİRME
+//  !!!!!!!!!!!!  DOM İLE ÖĞE SEÇME VE DEĞİŞTİRME   !!!!!!!!!!!! 
 
 document.getElementById('title')        // getElementById ile documentte ID ile arayarak, buluyoruz.
 
@@ -182,4 +182,36 @@ link.innerHTML += " degisti"           // innerHTML içerisindeki bilgiye ekleye
 
 link.style.color = "red"               // id elementine style atayabiliyoruz.
 link.classList.add('btn')              // id elementine class atayabiliyoruz.
+
+//  !!!!!!!!!!!!    PROMPT İLE KULLANICIDAN BİLGİ ALMAK    !!!!!!!!!!!! 
+/*
+let userName = prompt()
+
+let titlee = document.querySelector("#selam")       // Prompt ile aldığımız bilgiyi id ile seçtiğimiz öğenin içine yazdırıyoruz!!
+
+titlee.innerHTML = `${titlee.innerHTML} <small style="color: white" >${userName}</small> `
+*/
+
+// !!!!!!!!!!!! LİSTE İÇERİSİNDEKİ ÖĞEYE ULAŞMAK VE ÖĞE EKLEMEK !!!!!!!!!!!!
+
+let lastChild = document.querySelector("ul#list>li:last-child")      // LİSTEDEKİ SON ELEMANA ULAŞMAK
+lastChild.innerHTML = "go"          // LİSTEDEKİ SON ELEMANI DEĞİŞTİRME
+
+let firstChild = document.querySelector("ul#list>li:first-child")      // LİSTEDEKİ İLK ELEMANA ULAŞMAK
+firstChild.innerHTML = "Hey"       // LİSTEDEKİ İLK ELEMANI DEĞİŞTİRME
+
+// LİSTEYE YENİ ÖĞE EKLEMEK
+
+let listeyiBul = document.querySelector("ul#list")      // Listeyi bir değişkene atama
+let yeniLi1 = document.createElement('li')              // YENİ ÖĞE OLUŞTURMA
+let yeniLi2 = document.createElement('li')              // YENİ ÖĞE OLUŞTURMA   
+
+yeniLi1.innerHTML = "YENİ ÖĞE 1"                    // YENİ ÖĞENİN İÇİNE YAZMA
+yeniLi2.innerHTML = "YENİ ÖĞE 2"                    // YENİ ÖĞENİN İÇİNE YAZMA        
+
+listeyiBul.prepend(yeniLi1)                         // LİSTEYE YENİ ÖĞEYİ EN BAŞA EKLEME
+listeyiBul.append(yeniLi2)                          // LİSTEYE YENİ ÖĞEYİ EN SONA EKLEME
+
+
+// CSS CLASS EKLEMEK VEYA ÇIKARMAK 
 
