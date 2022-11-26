@@ -215,3 +215,33 @@ listeyiBul.append(yeniLi2)                          // LİSTEYE YENİ ÖĞEYİ E
 
 // CSS CLASS EKLEMEK VEYA ÇIKARMAK 
 
+document.querySelector("#list").classList.add
+
+// ********************************** FUNCTION / FONKSİYONLAR ********************************************
+
+// DEFAULT PARAMETRE VERİP FONKSİYONUN HATA VERMEDEN ÇALIŞMASINI SAĞLAYABİLİRİZ.
+// ÖRNEK: newName = "" , newAge = "" diye girebiliriz. veya ${newName ? newName : " "} 
+function hello (newName,newAge) {
+    document.querySelector("#li1").innerHTML = "Hello " + newName + "  Your age is: " + newAge
+}
+hello("SERKAN" , 36)
+
+function topla (sayi1 , sayi2) {
+    return sayi1 + sayi2 ;
+}
+let sonuc = topla (10,20)
+console.log (sonuc)
+
+    // id 'yi de function'a dışarıdan girmek!
+function hello1 (id , bilgi) {
+    document.querySelector(`#${id}`).innerHTML = bilgi
+}
+hello1("li2" , "serkan")     // id ve bilgiyi fonksiyona girdik!
+
+    // Function içerisie başka function girmek!
+
+function hello2(id , bilgi) {
+    document.querySelector(`#${id}`).innerHTML = bilgi
+}
+hello2("li3" ,topla (10,20))     // Bilgi için diğer fonksiyonu girdik!
+

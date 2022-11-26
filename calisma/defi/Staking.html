@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XXX DeFi/Staking</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" href="defi.css">
+</head>
+<body style="background-color: rgb(58, 164, 226);">
+<!-- BODY HEADER -->  
+    <header>
+      <!-- NAVBAR START -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">
+                <img class="rounded-4" width="30" height="30" src="https://picsum.photos/200/300" alt="A">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="how-to-join.html">How to Join</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="swap.html">Swap</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Staking.html">Staking</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Deals
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="pre-sale.html">Pre Sale</a></li>
+                      <li><a class="dropdown-item" href="private-sale.html">Private Sale</a></li>
+                      <li><a class="dropdown-item" href="seed-sale.html">Seed Sale</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <a href="blog.html">
+                <button class="btn btn-outline-info me-2" type="submit">Blog</button>
+              </a>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info" type="submit">Search</button>
+              </form>
+              <div style="padding-left: 8px;">
+                <a href="#">
+                  <button id="metamaskConnect" class="btn btn-outline-info me-2" type="button" >Connect</button>
+                </a>
+              </div>
+            </div>
+          </nav>
+      <!-- NAVBAR FINISH -->    
+    </header>
+<!-- BODY CONTENT -->
+    <div id="alert1"></div>
+    <div id="alert2"></div>    
+    <content>
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                <h1 class="text-center mt-3" id="h1s" >XXX Staking Panel</h1>
+              </div>
+            </div>
+            <!-- XXX STAKE BÖLÜMÜ -->
+            <div id="stakeLevel1">
+              <p></p>
+            </div>
+            <div class="card mt-1">
+              <div class="card-header">
+                XXX Token
+              </div>
+              <div class="card-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-sm-1">
+                            <img class="rounded-circle" style="margin-left: auto;" width="50" height="50" src="https://picsum.photos/200/300" alt="A">
+                          </div>
+                          <div class="col-sm-2">
+                            <h1><strong>XXX</strong></h1>
+                          </div>
+                          <div class="col-sm-9"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                      <p style="margin:auto"><strong>10.00%</strong></p>
+                      <p>APR</p>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                      <p style="margin:auto"><strong>$5.416.268</strong></p>
+                      <p>TVL</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card text-center">
+              <div class="card-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-7">
+                      <div class="mb-3" align="right">Wallet Balance:<span id="walletBalance1"><strong></strong></span></div>
+                      <form id="multiStakee1">
+                        <div class="input-group">
+                          <button class="btn btn-primary" type="button" name="button1" id="button1">MAX</button>
+                          <input id="stakeAmountInput" inputmode="decimal" class="form-control" placeholder="Staking Amount" minlength="1" maxlength="79" aria-label="Dollar amount (with dot and two decimal places)">
+                          <button class="btn btn-outline-secondary" type="reset" name="button2" id="button2">Reset</button>
+                          <button class="btn btn-primary" type="submit" name="button3" id="button3">Confirm</button>
+                        </div>
+                      </form>
+                      <div class="mt-2" style="color: blue;" align="left"><span id="stakeAmountText1"></span></div>
+                      <div class="mt-2" align="left"><span>You need to pass KYC before you can stake. Click <a href="#">here</a> to submit</span></div>
+                      <form id="multiStakee2">
+                        <div class="input-group mt-2">
+                          <button class="btn btn-primary" type="button" name="button77" id="button4">MAX</button>
+                          <input id="stakeAmountInput1" inputmode="decimal" class="form-control" placeholder="Withdraw Amount" minlength="1" maxlength="79" aria-label="Dollar amount (with dot and two decimal places)">
+                          <button class="btn btn-outline-secondary" type="reset" name="button55" id="button55">Reset</button>
+                          <button class="btn btn-primary" type="click" name="button5" id="button5">Confirm</button>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="col-5">
+                      <div class="card text-center">
+                        <div class="card-body">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-sm-6" align="right">
+                                <p>Deposit Fee</p>
+                                <p>Withdrawal Fee</p>
+                                <p>Performance Fee</p>
+                                <p>Lock Time</p>
+                              </div>
+                              <div class="col-sm-1">
+                                <h1>|</h1>
+                                <h1>|</h1>
+                                <h1>|</h1>
+                              </div>
+                              <div class="col-sm-5" align="left">
+                                <p id="depositFee1">0</p>
+                                <p id="withdrawalFee1">0</p>
+                                <p id="performanceFee1">0</p>
+                                <p id="lockTime1">none</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <!-- LP STAKE BÖLÜMÜ -->
+            <div class="card mt-3">
+              <div class="card-header">
+                XXX Token - ETH LP
+              </div>
+              <div class="card-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-sm-1">
+                            <img class="rounded-circle" style="margin-left: auto;" width="50" height="50" src="https://picsum.photos/200/300" alt="A">
+                          </div>
+                          <div class="col-sm-2">
+                            <h1><strong>XXX</strong></h1>
+                          </div>
+                          <div class="col-sm-1">
+                            <h1><strong>-</strong></h1>                          </div>
+                          <div class="col-sm-1">
+                            <img class="rounded-circle" style="margin-left: auto;" width="50" height="50" src="https://picsum.photos/200/300" alt="A">
+                          </div>
+                          <div class="col-sm-2">
+                            <h1><strong>ETH</strong></h1>
+                          </div>
+                          <div class="col-sm-5"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                      <p style="margin:auto"><strong>150.00%</strong></p>
+                      <p>APR</p>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                      <p style="margin:auto"><strong>$2.416.268</strong></p>
+                      <p>TVL</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card text-center">
+              <div class="card-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-7">
+                      <div class="mb-3" align="right">Wallet Balance:<span id="walletBalance"><strong></strong></span></div>
+                      <form id="multiStake">
+                        <div class="input-group">
+                          <button class="btn btn-primary" type="button" name="button6" id="button6">MAX</button>
+                          <input id="stakeAmountInput2" inputmode="decimal" class="form-control" placeholder="Staking Amount" minlength="1" maxlength="79" aria-label="Dollar amount (with dot and two decimal places)">
+                          <button class="btn btn-outline-secondary" type="reset" name="button-addon5" id="button-addon5">Reset</button>
+                          <button class="btn btn-primary" type="submit" name="button7" id="button7">Confirm</button>
+                        </div>
+                      </form>
+                      <div class="mt-2" style="color: blue;" align="left"><span id="stakeAmountText2"></span></div>
+                      <div class="mt-2" align="left"><span>You need to pass KYC before you can stake. Click <a href="#">here</a> to submit</span></div>
+                      <form id="multiStake1">
+                        <div class="input-group mt-2">
+                          <button class="btn btn-primary" type="button" name="button77" id="button77">MAX</button>
+                          <input id="stakeAmountInput3" inputmode="decimal" class="form-control" placeholder="Withdraw Amount" minlength="1" maxlength="79" aria-label="Dollar amount (with dot and two decimal places)">
+                          <button class="btn btn-outline-secondary" type="reset" name="button-addon6" id="button-addon6">Reset</button>
+                          <button class="btn btn-primary" type="click" name="button8" id="button8">Confirm</button>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="col-5">
+                      <div class="card text-center">
+                        <div class="card-body">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-sm-6" align="right">
+                                <p>Deposit Fee</p>
+                                <p>Withdrawal Fee</p>
+                                <p>Performance Fee</p>
+                                <p>Lock Time</p>
+                              </div>
+                              <div class="col-sm-1">
+                                <h1>|</h1>
+                                <h1>|</h1>
+                                <h1>|</h1>
+                              </div>
+                              <div class="col-sm-5" align="left">
+                                <p id="depositFee">0</p>
+                                <p id="withdrawalFee">0</p>
+                                <p id="performanceFee">0</p>
+                                <p id="lockTime">none</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <h1 class="text-center mt-3" id="h3s" ></h1>
+          </div>
+    </content>
+
+    <footer>
+
+    </footer>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="defi.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
