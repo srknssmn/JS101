@@ -100,3 +100,34 @@ console.log(copyListe2)
 let copyListe3 = [...femaleUsers, ...maleUsers]
 console.log(copyListe3)
 
+// *********   DİZİDEKİ EN BÜYÜK SAYIYI BULMAK *********
+
+let nums = [2,3,6,6,5,8,4,7]
+let bigNum = nums[0]
+
+for (i=0 ; i < nums.length ; i++) {
+
+    if (nums[i] > bigNum) {
+        bigNum = nums[i]
+    }
+}
+
+console.log(bigNum)
+
+// *********   DİZİDEKİ EN BÜYÜK SAYIYI BULMAK *********
+
+let nums1 = [2,3,6,6,9,5,8,4,7,11,10]
+let bigNum1 = nums1[0]
+let secondNum = nums1[0]
+
+for (i=0 ; i < nums1.length ; i++) {
+
+    if (nums1[i] > bigNum1) {
+        secondNum= bigNum1
+        bigNum1 = nums1[i]
+    } else if (nums1[i]>secondNum && nums1[i]< bigNum1){
+        secondNum=nums1[i];
+    } 
+}
+
+console.log(secondNum)

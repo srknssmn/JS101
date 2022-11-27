@@ -104,8 +104,27 @@ function liFunc (girdi) {
     }
 }
 
+/*
+let dizi = [2,5,8,11,15,17];
+
+let dizi1 = dizi.filter(fufi)
+
+function fufi (value) {
+    return value>10;
+}
+
+let dizi2 = dizi1.map(fufi1)
+
+function fufi1(value) {
+    return value*5;
+}
 
 
+function myfunction() {
+    console.log(dizi2)
+}
 
+myfunction();
+*/
 
 
