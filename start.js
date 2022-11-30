@@ -245,3 +245,10 @@ function hello2(id , bilgi) {
 }
 hello2("li3" ,topla (10,20))     // Bilgi için diğer fonksiyonu girdik!
 
+
+let arrrr = [1,2,3,4]
+
+let arr12 = arrrr.join("")
+
+console.log(arrrr)
+console.log(arr12)

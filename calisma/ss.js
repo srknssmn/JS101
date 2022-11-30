@@ -120,7 +120,7 @@ let nums1 = [2,3,6,6,9,5,8,4,7,11,10]
 let bigNum1 = nums1[0]
 let secondNum = nums1[0]
 
-for (i=0 ; i < nums1.length ; i++) {
+for ( let i=0 ; i < nums1.length ; i++) {
 
     if (nums1[i] > bigNum1) {
         secondNum= bigNum1
@@ -131,3 +131,41 @@ for (i=0 ; i < nums1.length ; i++) {
 }
 
 console.log(secondNum)
+
+// *********   STRING İÇERİSİNDEKİ HARFLERİ ARAMAK VE SIRALAMAK *********
+
+function vowelsAndConsonants(s) {
+
+    var vowels = "aeiou";
+
+    for(var i=0; i< s.length; i++){
+        if(vowels.search(s[i]) != -1){
+            console.log(s[i]);
+        } 
+    }
+    for(var i=0; i< s.length; i++){
+        if(vowels.search(s[i]) == -1){
+            console.log(s[i]);
+        } 
+    }    
+}
+// 2. Yöntem
+/*
+function vowelsAndConsonants(s) {
+    let vowels = ['a','e','i','o','u'];
+    let s2 = [...s];
+    s2.filter((c)=> vowels.includes(c)).forEach((c)=>{console.log(c)});
+    s2.filter((c)=> !vowels.includes(c)).forEach((c)=>{console.log(c)});
+}
+*/
+
+let arabalar = ["dogan" , "sahin" , "kartal"]
+console.log("Arabalar Length: " , arabalar.length)
+let coun = 0
+
+while (coun<arabalar.length) {
+    coun ++
+    if (arabalar[coun] == "kartal") {
+        console.log(arabalar[coun])
+    }
+}
