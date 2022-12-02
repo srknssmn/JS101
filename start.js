@@ -232,13 +232,13 @@ function topla (sayi1 , sayi2) {
 let sonuc = topla (10,20)
 console.log (sonuc)
 
-    // id 'yi de function'a dışarıdan girmek!
+// id 'yi de function'a dışarıdan girmek!
 function hello1 (id , bilgi) {
     document.querySelector(`#${id}`).innerHTML = bilgi
 }
 hello1("li2" , "serkan")     // id ve bilgiyi fonksiyona girdik!
 
-    // Function içerisie başka function girmek!
+// Function içerisie başka function girmek!
 
 function hello2(id , bilgi) {
     document.querySelector(`#${id}`).innerHTML = bilgi
@@ -252,3 +252,73 @@ let arr12 = arrrr.join("")
 
 console.log(arrrr)
 console.log(arr12)
+
+// CÜMLEYİ TERS ÇEVİRMEK
+
+let str = "Hello"
+
+function FirstReverse(str) { 
+    let splitStr = str.split("")  // split ile Karakterlerine ayırmak
+    console.log(splitStr)
+    let reverseArr = splitStr.reverse() // reverse ile ters çevirmek
+    console.log(reverseArr)
+  
+    let normalArr = reverseArr.join("") // join ile birleştirmek
+    console.log(normalArr)
+  
+    return normalArr; 
+}
+
+console.log(FirstReverse("Hello"))
+
+// Cümlenin ilk harflerini Büyük Yapmak
+
+let str2 = "i ran thEre"
+
+function LetterCapitalize(str) {
+    // split ile kelimelerine ayırıyor.
+  let arr = str.split(" ")          // split içerisinde 1 boşluk bırakmazsak, tek tek harflerine ayırır.
+  for (let i = 0; i < arr.length ; i++) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1)
+  }
+  return arr.join(" ")
+}
+console.log(LetterCapitalize(str2))
+
+//  *************** !!!FETCH API KULLANMAK!!! ***************
+
+fetch("data/info.json").then(
+    response => {
+        return response.json()
+    }
+).then(responseJson => {
+    console.log(responseJson.Age)
+})
+
+// AYNI ÖRNEK
+/*
+fetch("data/info.json").then(
+    response => response.json()
+).then(responseJson => console.log(responseJson.Age))
+*/
+let payload = {
+        userName : "Nukhet" ,
+        surName : "Sisman" ,
+        Age : 36
+
+  }
+
+
+  let endPoint = "/data/info.json"
+  
+  fetch(endPoint, {
+    method: 'post',
+    body: JSON.stringify(payload)
+  })
+  .then(response => response.json())
+  .then(function (data) {
+    console.log('Request succeeded with JSON response', data);
+  })
+  .catch(function (error) {
+    console.log('Request failed', error);
+  });
