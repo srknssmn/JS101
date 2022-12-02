@@ -345,3 +345,30 @@ function fbutton77() {
 }
 
 // *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- PRE-SALE BÖLÜMÜ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- FETCH API *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+fetch("data/info.json").then(
+  response => {
+      return response.json()
+  }
+).then(responseJson => {
+  console.log(responseJson[0])
+  console.log(responseJson[1])
+})
+
+// AYNI ÖRNEK
+/*
+fetch("data/info.json").then(
+  response => response.json()
+).then(responseJson => console.log(responseJson.Age))
+*/
+
+let payload = {
+      userName : "Ruya" ,
+      surName : "Sisman" ,
+      Age : 8
+
+}
+
+let endPoint = "http://127.0.0.1:5500/calisma/data/info.json"

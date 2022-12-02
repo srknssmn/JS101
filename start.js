@@ -286,7 +286,7 @@ function LetterCapitalize(str) {
 console.log(LetterCapitalize(str2))
 
 //  *************** !!!FETCH API KULLANMAK!!! ***************
-
+// JSON DOSYASINDAN VERİ ÇEKMEK
 fetch("data/info.json").then(
     response => {
         return response.json()
@@ -300,25 +300,20 @@ fetch("data/info.json").then(
 fetch("data/info.json").then(
     response => response.json()
 ).then(responseJson => console.log(responseJson.Age))
-*/
+
 let payload = {
         userName : "Nukhet" ,
         surName : "Sisman" ,
         Age : 36
 
   }
+*/
 
-
-  let endPoint = "/data/info.json"
-  
-  fetch(endPoint, {
-    method: 'post',
-    body: JSON.stringify(payload)
-  })
-  .then(response => response.json())
-  .then(function (data) {
-    console.log('Request succeeded with JSON response', data);
-  })
-  .catch(function (error) {
-    console.log('Request failed', error);
-  });
+// API DOSYASINDAN VERİ ÇEKMEK
+fetch("https://jsonplaceholder.typicode.com/posts")
+.then(response => response.json())
+.then(responseJson => {
+    responseJson.forEach(item => {
+        console.log(item.title)
+    });
+})
