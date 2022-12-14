@@ -39,4 +39,4 @@ async function addAndListPost(value) {
     }
 }
 
-addAndListPost({title: "Post4" , text: "lorem ipsum dolor" , sign: "Author41"});
+addAndListPost({title: "Post4" , text: "lorem ipsum dolor" , sign: "Author4"});
