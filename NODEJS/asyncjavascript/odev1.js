@@ -17,8 +17,11 @@ const listPosts = () => {
 function newPost(post) {
     return new Promise((resolve, reject) => {
       if (post) {
-        POSTS.push(post);
-        resolve("**** Yeni Post Eklendi *****");
+        POSTS.push(post)
+        resolve("Yeni Post Listeye Eklendi!");
+        // console.log("Yeni Post Listeye Eklendi!")  !BU ŞEKİLDE DE YAPILABİLİR!
+        // resolve(POSTS.push(post));
+
       } else {
         reject("HATA ALINDI!");
       }
@@ -28,8 +31,8 @@ function newPost(post) {
 async function addAndListPost(value) {
     try{
         listPosts();
-        let info = await newPost(value);
-        console.log(info);
+        let info = await newPost(value);    // info sadece resolve bilgisini almak için oluşturuldu!
+        console.log(info)   // resolve bilgisi ekrana yazdırıldı.
         listPosts();
     } catch (error) {
         console.log(error)
